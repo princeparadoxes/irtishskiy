@@ -11,6 +11,8 @@ if (@$_REQUEST['button1']) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $phone = $_POST["phone"];
+    $from = $_POST["from"];
+    $to = $_POST["to"];
     $type_number = $_POST["number"];
     if ($name == FALSE) {
         echo "<script>alert('Вы не указали имя');</script>";
@@ -23,7 +25,7 @@ if (@$_REQUEST['button1']) {
             } else {
                 echo "<script>alert('Ваша заявка обрабатывается');</script>";
                 mail($email, "Санаторий Иртышский", "Уважаемы(-ая) $name спасибо Вам за оставление заявки. \nВаша заявка принята на рассмотрение.\n Ожидайте письма от администрации.");
-                $da->addRequest($name, $phone, $email);
+                $da->addRequest($name, $phone, $email, $from, $to);
             }
         }
     }
@@ -199,6 +201,8 @@ if (@$_REQUEST['review_button']) {
                     <input type="text" class="f_input name" placeholder="Имя" name="name">
                     <input type="text" class="f_input phone" placeholder="Телефон" name="phone">
                     <input type="text" class="f_input mail" placeholder="E-mail" name="email">
+                    <input type="text" class="f_input day" placeholder="С (день/месяц)" name="from">
+                    <input type="text" class="f_input day" placeholder="По (день/месяц)" name="to">
                     <input type="submit" value="Оставить заявку" class="f_submit" name="button1">
                 </form>
                 <span class="b8_txt12">Мы реализуем все ваши идеи в кратчайшие сроки</span>
@@ -280,8 +284,9 @@ if (@$_REQUEST['review_button']) {
                         <input type="text" class="f_input name" placeholder="Имя" name="name">
                         <input type="text" class="f_input phone" placeholder="Телефон" name="phone">
                         <input type="text" class="f_input mail" placeholder="E-mail" name="email">
+                        <input type="text" class="f_input day" placeholder="С (день/месяц)" name="from">
+                        <input type="text" class="f_input day" placeholder="По (день/месяц)" name="to">
                         <input type="submit" value="Оставить заявку" class="f_submit" name="button1">
-
                     </form>
                     </form>
                 </div>
@@ -297,6 +302,8 @@ if (@$_REQUEST['review_button']) {
                         <input type="text" class="f_input name" placeholder="Имя">
                         <input type="text" class="f_input phone" placeholder="Телефон">
                         <input type="text" class="f_input mail" placeholder="E-mail">
+                        <input type="text" class="f_input day" placeholder="С (день/месяц)" name="from">
+                        <input type="text" class="f_input day" placeholder="По (день/месяц)" name="to">
                         <input type="submit" value="Оставить заявку" class="f_submit">
                     </form>
                 </div>

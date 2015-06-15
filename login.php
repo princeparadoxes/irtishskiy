@@ -16,6 +16,9 @@
                     <button type="submit" id="login-button">Войти</button>
                 </form>
             </div>
+            <div id="loader-wrapper" style="display: none">
+                <div id="loader"></div>
+            </div>
             <ul class="bg-bubbles">
                 <li></li>
                 <li></li>

@@ -18,9 +18,11 @@ class DatabaseActions {
         $this->_pdo = new PDO($dsn, $user, $pass, $opt);
     }
 
-    public function addRequest($name, $phone, $email) {
-        $stmt = $this->_pdo->prepare("INSERT INTO `request`(`name`, `phone`,`email`) VALUES (:name, :phone,:email)");
-        $stmt->execute(array('name' => $name, 'phone' => str_replace("+", "", str_replace("-", "", str_replace(")", "", str_replace("(", "", str_replace(" ", "", $phone))))), 'email' => $email));
+    public function addRequest($name, $phone, $email, $from, $to) {
+        $stmt = $this->_pdo->
+                prepare("INSERT INTO `request`(`name`, `phone`,`email`, `arrival_date`, `check_out_date`) VALUES (:name, :phone,:email, :from, :to)");
+        $stmt->execute(array('name' => $name, 'phone' => str_replace("+", "", str_replace("-", "", str_replace(")", "", 
+                str_replace("(", "", str_replace(" ", "", $phone))))), 'email' => $email, 'from' =>$from, 'to' => $to));
     }
 
     public function getAllFromRequest() {

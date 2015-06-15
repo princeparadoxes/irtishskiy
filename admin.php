@@ -33,6 +33,7 @@ if (@$_REQUEST['obtain']) {
         <meta charset="UTF-8">
         <title>Администативная панель</title>
         <link rel="stylesheet" href="css/login.css">
+        <link rel="stylesheet" href="css/loader.css">
         <link rel="stylesheet" href="css/admin.css">
     </head>
     <body style="overflow: hidden;">
@@ -52,11 +53,13 @@ if (@$_REQUEST['obtain']) {
                         ->show('phone', 'Телефон', array('0' => 'Не указан'))
                         ->show('type_number', 'Тип номера', array(-1 => 'Номер не выбран'))
                         ->show('email', 'Электронная почта')
+                        ->show('arrival_date', 'С')
+                        ->show('check_out_date', 'По')
                         ->show('obtain', "Статус", array(0 => 'Не принята', 1 => 'Принята'))
-                        ->show('actionob', '', '<a href="admin.php?obtain=@[id]"><input type="button" '
+                        ->show('actionob', '', '<a href="admin.php?obtain=@[id]"><input type="button" class="table_btn"'
                                 . 'style="color: #53e3a6; background-color: white; border: 1px solid white; border-radius: 3px; padding: 5px" '
                                 . 'value="Принять/Отменить"></a>')
-                        ->show('actiondl', 'Удалить', '<a href="admin.php?delete=@[id]"><input type="button" '
+                        ->show('actiondl', 'Удалить', '<a href="admin.php?delete=@[id]"><input type="button" class="table_btn"'
                                 . 'style="color: #53e3a6; background-color: white; border: 1px solid white; border-radius: 3px; padding: 5px" '
                                 . 'value="Удалить"></a>')
                         ->out();
@@ -72,6 +75,9 @@ if (@$_REQUEST['obtain']) {
                     . '<label class="expan" for="faq-'.$id.'">' . $name . '</label></h2><p class="expan">' . $review . '</p></div>';
                 }
                 ?>
+            </div>
+            <div id="loader-wrapper" style="display: none">
+                <div id="loader"></div>
             </div>
         </div>
     </body>
