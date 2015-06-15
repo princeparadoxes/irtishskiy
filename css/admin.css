@@ -1,0 +1,117 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto&subset=cyrillic-ext,latin:200,300);
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-weight: 300;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+ul.admin-menu {
+    text-align: center;
+    list-style: none;
+    padding: 20px 0;
+}
+
+ul.admin-menu li {
+    display: inline-block;
+}
+
+ul.admin-menu li a {
+    outline: 0;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 250px;
+    border-radius: 3px;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+}
+
+ul.admin-menu li a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+ul.admin-menu li a.selected {
+    outline: 0;
+    text-decoration: none;
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px 15px;
+    color: #53e3a6;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+div.expan  { 
+    margin: 20px 100px 20px 100px;
+    padding: 8px;
+    position: relative; 
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+input.expan[type=checkbox]  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+h2.expan  {
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    margin: 0 0 10px 0;
+}
+label.expan  {
+    cursor: pointer;
+}
+label.expan  {
+    position: relative;
+    display: block;
+    padding-left: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+label.expan:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 10px;
+    border-left: 8px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    margin-top: -8px;
+}
+input.expan[type=checkbox]:checked ~ h2 label:before {
+    border-left: 8px solid transparent;
+    border-top: 8px solid black;
+    border-right: 8px solid transparent;
+    margin-left: -4px;
+    margin-top: -4px
+}
+
+p.expan  {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 30px;
+    transition: max-height 0.4s ease;
+    font-family: 'Roboto', sans-serif;
+}
+input.expan[type=checkbox]:checked ~ h2 ~ p {
+    max-height: 80px;
+}
