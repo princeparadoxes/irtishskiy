@@ -93,8 +93,8 @@ if (@$_REQUEST['review_button']) {
             <div id="b2">
                 <div class="b2_1">
                     <span class="b2_img"><img src="img/b2_2.png"></span>
-                    <span class="b2_txt">Дизайн-проект</span>
-                    <span class="b2_txt1">разработанный профессионалами</span>
+                    <span class="b2_txt">Возможность забронировать</span>
+                    <span class="b2_txt1">номера через интернет</span>
                 </div>
                 <div class="b2_1">
                     <span class="b2_img"><img src="img/b2_3.png"></span>

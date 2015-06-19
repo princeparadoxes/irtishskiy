@@ -4,13 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Диплом/css/loader.css</file>
-            <file>file:/D:/Диплом/css/admin.css</file>
+            <file>file:/D:/Диплом/index.php</file>
             <file>file:/D:/Диплом/admin.php</file>
+            <file>file:/D:/Диплом/css/login.css</file>
             <file>file:/D:/Диплом/login.php</file>
             <file>file:/D:/Диплом/js/login.js</file>
-            <file>file:/D:/Диплом/css/login.css</file>
-            <file>file:/D:/Диплом/access_denied.php</file>
-            <file>file:/D:/Диплом/css/tables.css</file>
+            <file>file:/D:/Диплом/js/admin.js</file>
         </group>
     </open-files>
 </project-private>

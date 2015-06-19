@@ -14,5 +14,18 @@ $("#requests_button").click(function (event) {
 });
 $(".table_btn").click(function (event) {
     document.getElementById('loader-wrapper').style.display = "block";
+    document.getElementById('podlogka').style.display = "block";
 });
+$(document).ready(function () {
+    var token = document.URL.toString().substring(document.URL.toString().lastIndexOf('=') + 1);
+    if (token == '87689385') {
+        $('#container').fadeIn()
+                .css({top: 1000, position: 'absolute'})
+                .animate({top: 0}, 800, function () {
+                    document.getElementById('container').style.width = "100%";
+                    document.getElementById('container').style.height = "100%";
+                });
+    }
+})
+
 
